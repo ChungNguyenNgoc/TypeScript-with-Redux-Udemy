@@ -1,7 +1,11 @@
-import { Action, RepositoriesState } from "../actions";
-import { ActionType } from "../constants";
+import { Action } from "../actions";
+import { ActionType } from "../action-types";
 
-
+export interface RepositoriesState {
+  loading: boolean;
+  error: string | null;
+  data: string[];
+}
 
 const repositoriesReducer = (
   state: RepositoriesState,

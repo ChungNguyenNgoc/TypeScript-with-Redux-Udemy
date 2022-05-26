@@ -1,11 +1,4 @@
-import { ActionType } from "../constants";
-
-export interface RepositoriesState {
-  loading: boolean;
-  error: string | null;
-  data: string[];
-}
-
+import { ActionType } from "../action-types";
 interface SearchRepositoriesAction {
   type: ActionType.SEARCH_REPOSITORIES;
 }
