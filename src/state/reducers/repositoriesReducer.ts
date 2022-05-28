@@ -1,14 +1,20 @@
 import { Action } from "../actions";
 import { ActionType } from "../action-types";
 
-export interface RepositoriesState {
+interface RepositoriesState {
   loading: boolean;
   error: string | null;
   data: string[];
 }
 
+const inititalState = {
+  loading: false,
+  error: null,
+  data: [],
+};
+
 const repositoriesReducer = (
-  state: RepositoriesState,
+  state: RepositoriesState = inititalState,
   action: Action,
 ): RepositoriesState => {
   switch (action.type) {
